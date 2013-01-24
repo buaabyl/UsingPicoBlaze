@@ -11,3 +11,15 @@ So I write a simple assembly preprocessor in python.
 This memo is what I have done. Writing down
 something as manual for myself:)
 
+== Language and tool ==
+ * C/C++ - no need to say
+ * Verilog/VHDL - language for fpga
+ * Python - script interpreter
+ * Vim - editor
+ * gcc - compiler
+ * ise - fpga ide
+
+== Target ==
+ * SPI Master
+ * Small web-server
+

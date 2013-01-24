@@ -1,0 +1,63 @@
+= ROADMAP =
+== 1. Prepare ==
+Write some scripts to convert wiki to other.
+ * wiki2tex: Wiki -> Tex
+ * pdflatex: Tex ->Pdf
+ * wiki2html: Wiki -> html
+
+== 2. Using KCPSM3 ==
+=== How to store code ===
+=== What assembler generated ===
+=== Instruction set ===
+=== Assembler in python ===
+
+== 3. Reading KCPSM3 ==
+=== Architecture ===
+=== Interrupt Capture ===
+=== Interrupt Logic ===
+=== Flow Control ===
+=== PC and Registers ===
+=== Store Memory ===
+=== Call Stack ===
+=== ALU and Multiplexer ===
+=== Input and output ===
+=== Rewrite KCPSM3 in verilog ===
+=== Assembler preprocessor in python ===
+
+== 4. JTAG ==
+=== Missing debug ===
+=== What is jtag ===
+=== Jtag slave in verilog ===
+=== Jtag master in c ===
+=== A stm32-based jtag master ===
+=== A kcpsm3-base jtag master ===
+=== Add breakpoint controler ===
+=== Add boundary scan to kcpsm3 ===
+=== Reuse lattice mico8 gcc ===
+
+== 5. Port gcc ==
+=== What lm8-gcc done ===
+=== How lm8-gcc porting ===
+=== Port kcpsm3 ===
+
+== 6. Web Server ==
+=== Checksum and crc ===
+=== Link layer interface ===
+=== IP ===
+=== ARP RAPR ===
+=== UDP ===
+=== TCP ===
+=== Multicore ===
+
+== 7. RTOS ==
+=== Need a os ===
+=== Abstract layer ===
+
+== 8. SDRAM Controler ==
+=== Controler in verilog ===
+=== File system ===
+
+== 9. Summary ==
+=== What we have ===
+
+

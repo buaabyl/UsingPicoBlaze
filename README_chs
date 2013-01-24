@@ -11,3 +11,15 @@ PicoBlaze是一个8位嵌入式处理器。
 这个备忘记录着我做的一些事情，记下这些
 可以方便自己以后翻阅。
 
+== 语言和工具 ==
+ * C/C++ - 不用解释了
+ * Verilog/VHDL - FPGA开发语言
+ * Python - 脚本解析器
+ * Vim - 代码编辑器
+ * gcc - 编译器
+ * ise - FPGA的集成开发环境
+
+== 目标 ==
+ * SPI Master
+ * Small web-server
+

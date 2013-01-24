@@ -1,0 +1,25 @@
+= 风格 =
+== 格式 ==
+这个工程会包含文本、图像、源代码。
+因为自己使用Trac很久了，所以文本会以
+Trac的Wiki格式来编写，而代码高亮也会以
+Pygment来转换。
+
+== 编码 ==
+所有的文本用utf-8编码。
+
+== 输出 ==
+在开始写备忘之前需要先写一些脚本。
+所有的脚本会以python来写，用上正则表达式
+和mako模板引擎。
+
+使用latex来生成pdf文本，自己写脚本
+生成html。
+
+输出PDF:
+ * wiki2tex: Wiki -> Tex
+ * pdflatex: Tex ->Pdf
+
+输出HTML:
+ * wiki2html: Wiki -> html
+
