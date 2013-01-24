@@ -1,13 +1,13 @@
 = 说明 =
-
 == 介绍 ==
-    PicoBlaze是一个8位嵌入式处理器。
+PicoBlaze是一个8位嵌入式处理器。
 由xilinx公司的Ken Chapman编写。
-    我发现是PicoBlaze是在使用了MicroBlaze后。
+
+我发现是PicoBlaze是在使用了MicroBlaze后。
 我使用PicoBlaze作为SPI接口的AD7715主控。
 随着汇编代码的量逐渐增多，这个固件越来越难维护了。
 于是自己用python编写汇编预处理器。
 
-    这个备忘记录着我做的一些事情，记下这些
+这个备忘记录着我做的一些事情，记下这些
 可以方便自己以后翻阅。
 

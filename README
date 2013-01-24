@@ -1,13 +1,13 @@
 = README =
-
 == Introduction ==
-    PicoBlaze is a 8-bit embedded processor.
+PicoBlaze is a 8-bit embedded processor.
 Created by Ken Chapman, work in xilinx.
-    And I found PicoBlaze after used of MicoBlaze.
+
+And I found PicoBlaze after used of MicoBlaze.
 I use PicoBlaze as SPI master for AD7715, but wrote firmware
 in assembly is too hard when the source code growing up.
 So I write a simple assembly preprocessor in python.
 
-    This memo is what I have done. Writing down
+This memo is what I have done. Writing down
 something as manual for myself:)
 
