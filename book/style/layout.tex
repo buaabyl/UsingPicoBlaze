@@ -1,0 +1,60 @@
+%--------------------------------------------
+\usepackage{graphicx}
+
+%--------------------------------------------
+\usepackage{color}
+
+%--------------------------------------------
+\usepackage{minted}
+%new command can be used like this:
+%
+% \begin{ccode}
+% ...
+% \end{ccode}
+\newminted{c}{linenos,fontsize=\normalsize}
+\newminted{v}{linenos,fontsize=\normalsize}
+\newminted{sh}{linenos,fontsize=\normalsize}
+\newminted{python}{linenos,fontsize=\normalsize}
+\newminted{text}{linenos,fontsize=\normalsize}
+\newminted{diff}{linenos,fontsize=\normalsize}
+
+%linenos font style
+\renewcommand{\theFancyVerbLine} {
+    \small\textcolor[rgb]{0.5,0.5,1.0}{
+    \arabic{FancyVerbLine}}}
+
+%--------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyhead[RE, LO]{\leftmark}
+\fancyhead[LE, RO]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt} 
+
+\fancyfoot{}
+%\fancyfoot[LE, RO]{\bfseries Using PicoBlaze}
+%\fancyfoot[CE, CO]{}
+\fancyfoot[RE, RO]{\color{gray} \LaTeXe}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+%--------------------------------------------
+%\usepackage{listings}
+%\lstset{numbers=left,
+%    numberstyle=\small\color[rgb]{0.5,0.5,1.0},
+%    frame=none,
+%    flexiblecolumns=false,
+%    language=Python,
+%    basicstyle=\ttfamily\normalsize,
+%    breaklines=true,
+%    extendedchars=true,
+%    escapechar=\\,
+%    texcl=true,
+%    showstringspaces=none,
+%    keywordstyle=\bfseries,
+%    tabsize=4}
+
+%--------------------------------------------
+\usepackage{indentfirst}
+\usepackage[colorlinks=true, pdfstartview=FixW]{hyperref}
+

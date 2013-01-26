@@ -1,0 +1,21 @@
+\begin{pythoncode}
+#!/bin/python
+import sys, re
+
+fin = open(sys.argv[1])
+lines = fin.read()
+fin.close()
+
+regex_prefix = re.compile(r'^diff -uNr ')
+regex_header = re.compile(r'^diff -uNr ([^ ]+) ([^ ]+)')
+lineno = 1
+
+for line in lines.split('\n'):
+    if regex_prefix.match(line):
+        res = regex_header.search(line)
+        relative_path = res.groups()[0]
+        relative_path = '/'.join(relative_path.split('\\')[1:])
+        print '%04d: %s' % (lineno, relative_path)
+    lineno += 1
+\end{pythoncode}
+

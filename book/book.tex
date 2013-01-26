@@ -1,0 +1,70 @@
+%global style
+\documentclass[a4paper]{book}
+\usepackage{CJK}
+
+%predined style
+\input{style/layout}
+
+%--------------------------------------------
+\begin{document} \begin{CJK*}{UTF8}{song} \large
+%begin of document
+
+\title{Using PicoBlaze}
+\author{buaa.byl@gmail.com}
+\date{\today}
+\maketitle
+\tableofcontents
+
+%*******************************************************************************
+\include{introduction}
+
+\part{Using KCPSM3}
+\chapter{How to store code}
+\chapter{What assembler generated}
+\chapter{Instruction set}
+\chapter{Assembler in python}
+
+\part{Reading KCPSM3}
+\chapter{Architecture}
+\include{kc_interrupt}
+\chapter{Interrupt Logic}
+\chapter{Flow Control}
+\chapter{PC and Registers}
+\chapter{Store Memory}
+\chapter{Call Stack}
+\chapter{ALU and Multiplexer}
+\chapter{Input and output}
+\chapter{Rewrite KCPSM3 in verilog}
+\chapter{Assembler preprocessor in python}
+
+\part{JTAG}
+\chapter{Missing debug}
+\chapter{What is jtag}
+\chapter{Jtag slave in verilog}
+\chapter{Jtag master in c}
+\chapter{A stm32-based jtag master}
+\chapter{A kcpsm3-base jtag master}
+\chapter{Add breakpoint controler}
+\chapter{Add boundary scan to kcpsm3}
+\chapter{Reuse lattice mico8 gcc}
+
+\part{Port GCC}
+\include{lm8_compare}
+\chapter{How lm8-gcc porting}
+\chapter{Port kcpsm3}
+
+\part{SPI and UART}
+\chapter{Using kcuart}
+\chapter{Implement a SPI Controler}
+
+\part{Web Server}
+
+\part{RTOS}
+
+\part{SDRAM}
+
+%*******************************************************************************
+
+%end of document
+\end{CJK*} \end{document}
+

@@ -1,0 +1,22 @@
+\begin{vcode}
+module kcpsm3(
+        address,
+        instruction,
+        port_id,
+        write_strobe,
+        out_port,
+        read_strobe,
+        in_port,
+        interrupt,
+        interrupt_ack,
+        reset,
+        clk) ;
+ 
+output  [9:0]   address ;
+input   [17:0]  instruction ;
+output  [7:0]   port_id ;
+output          write_strobe, read_strobe, interrupt_ack ;
+output  [7:0]   out_port ;
+input   [7:0]   in_port ;
+input           interrupt, reset, clk ;
+\end{vcode}
