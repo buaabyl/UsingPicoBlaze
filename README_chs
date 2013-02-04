@@ -1,5 +1,7 @@
 = 说明 =
 == 介绍 ==
+(测试中文日志。)
+
 PicoBlaze是一个8位嵌入式处理器。
 由xilinx公司的Ken Chapman编写。
 
