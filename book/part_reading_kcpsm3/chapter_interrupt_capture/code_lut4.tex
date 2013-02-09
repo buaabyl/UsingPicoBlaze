@@ -1,0 +1,10 @@
+\begin{vcode}
+module LUT4 (O, I0, I1, I2, I3);
+    parameter INIT = 16'h0000;
+    input I0, I1, I2, I3;
+    output O;
+    wire out0, out1, out2, out3, out;
+    assign O = INIT[{I3,I2,I1,I0}];
+endmodule
+\end{vcode}
+

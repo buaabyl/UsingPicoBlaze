@@ -1,0 +1,9 @@
+\begin{vcode}
+FD ack_flop ( 
+    .D(active_interrupt),
+    .Q(interrupt_ack_internal),
+    .C(clk));
+
+assign interrupt_ack = interrupt_ack_internal ;
+\end{vcode}
+

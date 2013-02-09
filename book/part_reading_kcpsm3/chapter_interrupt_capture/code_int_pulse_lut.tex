@@ -1,0 +1,12 @@
+\begin{vcode}
+ // synthesis translate_off 
+ defparam int_pulse_lut.INIT = 16'h0080 ;
+ // synthesis translate_on 
+ LUT4 int_pulse_lut ( 
+ .I0(t_state),
+ .I1(clean_int),
+ .I2(int_enable),
+ .I3(active_interrupt),
+ .O(int_pulse ))/* synthesis xc_props = "INIT=0080"*/;
+\end{vcode}
+

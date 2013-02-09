@@ -1,0 +1,18 @@
+\begin{vcode}
+always@(posedge clk)
+begin
+    if (reset)
+        reset_delay <= 1'b1;
+    else
+        reset_delay <= 1'b0;
+end
+
+always@(posedge clk)
+begin
+    if (reset)
+        internal_reset <= 1'b1;
+    else
+        internal_reset <= reset_delay;
+end
+\end{vcode}
+

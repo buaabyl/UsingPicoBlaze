@@ -1,0 +1,10 @@
+\begin{vcode}
+always@(t_state or clean_int or int_enable or active_interrupt)
+begin
+    if (!active_interrupt && int_enable && t_state && clean_int)
+        int_pulse = 1;
+    else
+        int_pulse = 0;
+end
+\end{vcode}
+

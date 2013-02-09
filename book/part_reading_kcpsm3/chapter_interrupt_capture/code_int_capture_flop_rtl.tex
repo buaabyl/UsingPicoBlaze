@@ -1,0 +1,10 @@
+\begin{vcode}
+always@(posedge clk)
+begin
+    if (internal_reset)
+        clean_int <= 1'b0;
+    else
+        clean_int <= interrupt;
+end
+\end{vcode}
+

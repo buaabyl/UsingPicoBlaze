@@ -1,0 +1,14 @@
+\begin{vcode}
+module FDR (Q, C, D, R);
+    parameter INIT = 1'b0;
+    output Q;
+    reg    Q;
+    input  C, D, R;
+    always @(posedge C)
+        if (R)
+        Q <= 0;
+        else
+        Q <= D;
+endmodule
+\end{vcode}
+

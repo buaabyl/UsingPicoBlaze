@@ -1,0 +1,12 @@
+\begin{vcode}
+reg t_state;
+
+always@(posedge clk)
+begin
+    if (internal_reset)
+        t_state <= 1'b0;
+    else
+        t_state <= ~t_state;
+end
+\end{vcode}
+

@@ -1,0 +1,14 @@
+\begin{vcode}
+FDE shadow_carry_flop ( 
+    .D(carry_flag),
+    .Q(shadow_carry),
+    .CE(active_interrupt),
+    .C(clk));
+
+FDE shadow_zero_flop ( 
+    .D(zero_flag),
+    .Q(shadow_zero),
+    .CE(active_interrupt),
+    .C(clk));
+\end{vcode}
+

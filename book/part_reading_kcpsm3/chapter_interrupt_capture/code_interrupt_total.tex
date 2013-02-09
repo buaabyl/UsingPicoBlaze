@@ -1,0 +1,33 @@
+\begin{vcode}
+reg clean_int;
+wire int_pulse;
+reg active_interrupt;
+
+//int_capture_flop
+always@(posedge clk)
+begin
+    if (internal_reset)
+        clean_int <= 1'b0;
+    else
+        clean_int <= interrupt;
+end
+
+//int_pulse_lut
+always@(t_state or clean_int or int_enable or active_interrupt)
+begin
+    if (!active_interrupt && int_enable && t_state && clean_int)
+        int_pulse = 1;
+    else
+        int_pulse = 0;
+end
+
+//int_flop
+always@(posedge clk)
+begin
+    if (internal_reset)
+        active_interrupt <= 1'b0;
+    else
+        active_interrupt <= int_pulse;
+end
+\end{vcode}
+

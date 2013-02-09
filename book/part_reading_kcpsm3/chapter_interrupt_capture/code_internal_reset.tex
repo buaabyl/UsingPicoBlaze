@@ -1,0 +1,14 @@
+\begin{vcode}
+FDS reset_flop1 ( 
+    .D(1'b0),
+    .Q(reset_delay),
+    .S(reset),
+    .C(clk));
+
+FDS reset_flop2 ( 
+    .D(reset_delay),
+    .Q(internal_reset),
+    .S(reset),
+    .C(clk));
+\end{vcode}
+

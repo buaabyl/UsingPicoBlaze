@@ -1,0 +1,30 @@
+\section{int\_pulse\_lut}
+
+clear\_int的下一级是一个组合逻辑，使用LUT4来实现的。
+
+\textbf{int\_pulse\_lut.v}
+\input{code_int_pulse_lut}
+
+这个LUT4的初始值是0x0080。用卡诺图表示如下：
+
+\textbf{karnaugh graphic}
+\input{code_int_pulse_lut_karnaugh}
+
+很容易写出逻辑关系式：
+
+\textbf{logic}
+\begin{vcode}
+assign out = !bit3 & bit2 & bit1 & bit0;
+\end{vcode}
+
+现在可以改写为rtl风格的代码：
+
+\textbf{int\_pulse\_lut\_rtl.v}
+\input{code_int_pulse_lut_rtl}
+
+这个int\_pulse\_lut逻辑用于开启和忽略中断信号。
+
+同样用Synplify综合PicoBlaze得到的lut内部结构也是这样的
+
+\includegraphics{int_pulse_lut}
+

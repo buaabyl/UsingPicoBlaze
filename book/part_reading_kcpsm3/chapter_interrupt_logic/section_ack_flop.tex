@@ -1,0 +1,16 @@
+\section{ack\_flop}
+
+在前面已经知道外部的中断信号经过处理后为active\_interrupt。
+这个信号接着驱动ack\_flop逻辑。
+
+\textbf{ack\_flop.v}
+\input{code_ack_flop}
+
+改为rtl风格的代码如下：
+
+\textbf{ack\_flop\_rtl.v}
+\input{code_ack_flop_rtl}
+
+在这个逻辑，处理器会通知外设“中断信号已经捕获了”，这个确认信号是
+interrupt\_ack。
+

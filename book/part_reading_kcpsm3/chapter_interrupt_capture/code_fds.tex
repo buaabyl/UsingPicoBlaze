@@ -1,0 +1,15 @@
+\begin{vcode}
+module FDS (Q, C, D, S);
+    parameter INIT = 1'b1;
+    output Q;
+    reg    Q;
+    input  C, D, S;
+
+    always @(posedge C)
+        if (S)
+        Q <= 1;
+        else
+        Q <= D;
+endmodule
+\end{vcode}
+

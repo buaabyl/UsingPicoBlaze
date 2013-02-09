@@ -1,0 +1,37 @@
+\section{int\_capture\_flop}
+我们先从外部中断引脚开始看，看看经过哪些逻辑。以下是picoblaze的顶层接口：
+
+\textbf{kcpsm3\_top.v}
+\input{code_kcpsm3_top}
+
+\newpage
+可以从字义上理解interrupt为外部中断的入口，而interrupt\_ack为中断确认信号，interrupt首先连入int\_capture\_flop逻辑：
+
+\textbf{int\_capture\_flop.v}
+\input{code_int_capture_flop}
+
+在Synplify的Technology View可以看到如下的图\\
+\includegraphics{int_capture_flop.png}
+
+这个FDR是“同步复位D触发器”原语。FDR是比较好理解的，D是输入，Q是输出，R是复位，C是时钟。\\
+在\verb|C:\Xilinx\12.4\ISE_DS\ISE\verilog\xeclib\unisims|下是官方给出的仿真代码。
+在后面还会涉及到LUT（查找表），所以在这里先介绍一下。
+
+\textbf{FDR}
+\input{code_fdr}
+
+\textbf{LUT4}
+\input{code_lut4}
+
+FDR就是一个触发器，LUT4是一个16bit的ROM结构，O是输出，I3、I2、I1、I0是地址线。
+
+因为原语不太直观，所以在这里把\verb|int_capture_flop|改写为rtl描述。
+
+\textbf{int\_capture\_flop\_rtl.v}
+\input{code_int_capture_flop_rtl}
+
+这个逻辑同步外部的中断信号。interrupt是外部中断信号，\verb|clean_int|是同步后的中断信号。 \verb|internal_reset|是PicoBlaze内部复位信号，当处理器复位的时候，\verb|internal_reset|会持续一段时间。
+
+用原语来写有个好处就是综合的结果基本上就是你想要的电路，
+但代价就是不容易维护，也不利于别人阅读。
+

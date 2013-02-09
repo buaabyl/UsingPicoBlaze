@@ -1,0 +1,16 @@
+\section{Karnaugh Graphic}
+用原语来写逻辑就需要用上卡诺图，
+而阅读用原语写的组合逻辑代码更需要卡诺图！
+因为LUT的值是一个16位的数字，很不直观，于是想到自己写个脚本
+把16位的值转为一个平面的图。
+
+\textbf{karnaugh.py}
+\input{code_karnaugh}
+
+对于0x1010，转换的结果如下：
+
+\textbf{output}
+\input{code_karnaugh_output}
+
+这样就很容易弄清楚逻辑关系了:) 
+

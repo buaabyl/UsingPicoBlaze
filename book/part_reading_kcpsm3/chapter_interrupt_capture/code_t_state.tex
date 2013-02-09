@@ -1,0 +1,15 @@
+\begin{vcode}
+ // synthesis translate_off 
+ defparam t_state_lut.INIT = 2'h1 ;
+ // synthesis translate_on 
+ LUT1 t_state_lut( 
+ .I0(t_state),
+ .O(not_t_state))/* synthesis xc_props = "INIT=1"*/;
+
+ FDR toggle_flop ( 
+ .D(not_t_state),
+ .Q(t_state),
+ .R(internal_reset),
+ .C(clk));
+\end{vcode}
+

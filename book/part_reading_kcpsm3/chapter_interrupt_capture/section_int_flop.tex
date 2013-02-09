@@ -1,0 +1,28 @@
+\section{int\_flop}
+在上一个模块中有一个信号 active\_interrupt ，这个信号由int\_flop驱动，这是一个D触发器。
+在这里要提一下active\_interrupt这个信号扇出很多，内部很多的逻辑都和它相关。
+
+\textbf{int\_flop.v}
+\input{code_int_flop.tex}
+
+改为rtl方式：
+
+\textbf{int\_flop\_rtl.v}
+\input{code_int_flop_rtl.tex}
+
+把以上分析的几个原语整合起来，可以看看
+
+\textbf{logic}
+\input{code_interrupt_total.tex}
+
+中断经过capture延迟一个时钟，然后给到组合逻辑，再经过D触发器锁存。
+int\_flop给出的信号会反馈到int\_pulse\_lut，
+如果只看这一部分，active\_interrupt就有可能是一个周期振荡的波形。
+不过由于中断的反馈最后会改变使能信号int\_enable，而这个信号也是
+在组合逻辑中用到的，所以不会一直的振荡下去。
+先不管这个，我们看看中断信号进来后会改变哪些信号：
+
+\textbf{waveform of interrupt}
+\input{code_waveform_interrupt}
+
+

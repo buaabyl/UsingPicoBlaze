@@ -1,4 +1,3 @@
-\begin{pythoncode}
 #!/bin/python
 import sys
 
@@ -48,18 +47,18 @@ def printv(bits):
     #karnaugh map
     print('kano-graphic:')
     sys.stdout.write('||= bit(3210) =|' + \
-            '|=  xx11 =||=  xx10 =||=  xx00 =||=  xx01 =||\n')
+            '|= xx11 =||= xx10 =||= xx00 =||= xx01 =||\n')
     
-    sys.stdout.write('||         11xx||%7s  ||%7s  ||%7s  ||%7s  ||\n' % (
+    sys.stdout.write('||         11xx||%6s  ||%6s  ||%6s  ||%6s  ||\n' % (
         bits[0*4 + 0], bits[0*4 + 1], bits[0*4 + 3], bits[0*4 + 2]))
     
-    sys.stdout.write('||         10xx||%7s  ||%7s  ||%7s  ||%7s  ||\n' % (
+    sys.stdout.write('||         10xx||%6s  ||%6s  ||%6s  ||%6s  ||\n' % (
         bits[1*4 + 0], bits[1*4 + 1], bits[1*4 + 3], bits[1*4 + 2]))
     
-    sys.stdout.write('||         00xx||%7s  ||%7s  ||%7s  ||%7s  ||\n' % (
+    sys.stdout.write('||         00xx||%6s  ||%6s  ||%6s  ||%6s  ||\n' % (
         bits[3*4 + 0], bits[3*4 + 1], bits[3*4 + 3], bits[3*4 + 2]))
     
-    sys.stdout.write('||         01xx||%7s  ||%7s  ||%7s  ||%7s  ||\n' % (
+    sys.stdout.write('||         01xx||%6s  ||%6s  ||%6s  ||%6s  ||\n' % (
         bits[2*4 + 0], bits[2*4 + 1], bits[2*4 + 3], bits[2*4 + 2]))
     sys.stdout.write('\n')
 
@@ -75,5 +74,4 @@ if __name__ == '__main__':
     else:
         printlut4(int(sys.argv[1], 16))
 
-\end{pythoncode}
 

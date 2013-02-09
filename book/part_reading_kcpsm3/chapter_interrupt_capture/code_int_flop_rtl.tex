@@ -1,0 +1,10 @@
+\begin{vcode}
+always@(posedge clk)
+begin
+    if (internal_reset)
+        active_interrupt <= 1'b0;
+    else
+        active_interrupt <= int_pulse;
+end
+\end{vcode}
+

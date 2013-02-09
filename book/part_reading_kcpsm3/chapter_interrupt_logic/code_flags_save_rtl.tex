@@ -1,0 +1,18 @@
+\begin{vcode}
+always@(posedge clk)
+begin
+    if (active_interrupt)
+        shadow_carry <= carry_flag;
+    else
+        shadow_carry <= shadow_carry;
+end
+
+always@(posedge clk)
+begin
+    if (active_interrupt)
+        shadow_zero <= zero_flag;
+    else
+        shadow_zero <= shadow_zero;
+end
+\end{vcode}
+

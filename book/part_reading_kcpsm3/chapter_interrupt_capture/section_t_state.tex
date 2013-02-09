@@ -1,0 +1,20 @@
+\section{t\_state}
+
+再来看看 t\_state 信号，这个信号其实就是将时钟二分频，
+在两个不同的时间相做不同的动作。 
+涉及到两个器件LUT1和FDR，结合起来看：
+
+\textbf{t\_state.v}
+\input{code_t_state}
+
+直接改写为rtl表示：
+
+\textbf{t\_state\_rtl.v}
+\input{code_t_state_rtl}
+
+综合图如下：
+
+\includegraphics{t_state.png}
+
+
+
