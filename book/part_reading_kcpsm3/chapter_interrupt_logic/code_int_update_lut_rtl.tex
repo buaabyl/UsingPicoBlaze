@@ -1,0 +1,10 @@
+\begin{vcode}
+always@(active_interrupt or instruction[15] or instruction[16] or instruction[17])
+begin
+    if (active_interrupt || ((instruction[17:15] == 3'b111) && !active_interrupt))
+        int_update_enable = 1'b1;
+    else
+        int_update_enable = 1'b0;
+end
+\end{vcode}
+

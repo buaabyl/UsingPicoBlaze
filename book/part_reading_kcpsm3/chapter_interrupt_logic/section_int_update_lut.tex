@@ -1,0 +1,25 @@
+\section{int\_update\_lut}
+
+以下为允许“更新中断使能信号”（int\_enable）的信号（int\_update\_enable）:)
+
+\textbf{int\_update\_lut.v}
+\input{code_int_update_lut}
+
+它的卡诺图显示为
+
+\textbf{karnaugh output}
+\input{code_int_update_lut_karnaugh}
+
+从上图可以看出当bit0为1的时候，输出1；还有bit3210=4'b1110的时候输出1。
+于是表达式为 O = (bit0 == 1'b1) || ((bit0 == 1'b0) \&\& (bit321 == 3'b111))
+即以下的rtl代码
+
+\textbf{int\_update\_lut\_rtl.v}
+\input{code_int_update_lut_rtl}
+
+有没有发现这个逻辑很怪，为什么当指令最高3位是3'b111的时候就可以更新中断使能信号？
+回头去查指令集，发现开头是3'b111的指令只有两个！一个是ReturnI，
+另一个是 EnableInterrupt 和 DisableInterrupt。
+也就是唯一的两个可以开启和关闭中断的指令。
+不过这两个指令的最后一位是开关中断，不知道这里为啥没有判断，后面再分析:)
+

@@ -1,0 +1,12 @@
+\begin{vcode}
+// synthesis translate_off 
+defparam int_update_lut.INIT = 16'hEAAA ;
+// synthesis translate_on 
+LUT4 int_update_lut( 
+.I0(active_interrupt),
+.I1(instruction[15]),
+.I2(instruction[16]),
+.I3(instruction[17]),
+.O(int_update_enable) )/* synthesis xc_props = "INIT=EAAA"*/;
+\end{vcode}
+
